@@ -1,0 +1,151 @@
+{
+  "project_info": {
+    "project_number": "672991853076",
+    "firebase_url": "https://smartvalve-82205.firebaseio.com",
+    "project_id": "smartvalve-82205",
+    "storage_bucket": "smartvalve-82205.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672991853076:android:ba60c25553df3a6c",
+        "android_client_info": {
+          "package_name": "awalk.app.smartvalve"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672991853076-k435d8ng8iiq36v216qhk3boiksda8k6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "awalk.app.smartvalve",
+            "certificate_hash": "b720b6b45e16874e46d38a9d3a5a455018846c1a"
+          }
+        },
+        {
+          "client_id": "672991853076-gpl32obi368eejh6mr89qdgkjm4r9udm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "awalk.app.smartvalve",
+            "certificate_hash": "913b710d3421104ff094a33d3b7e434e61801f2a"
+          }
+        },
+        {
+          "client_id": "672991853076-mcoupsq0sb0co8ukk6bn3prungvlod20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKMSTrNDo17twPkNwgQKRahO7YP8DOd_o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672991853076-mcoupsq0sb0co8ukk6bn3prungvlod20.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672991853076:android:6b1b92b5245c8399",
+        "android_client_info": {
+          "package_name": "awalk.app.smartvalvemanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672991853076-p29l84svemlt9bd0i9lj3k2gs8vij6gf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "awalk.app.smartvalvemanager",
+            "certificate_hash": "913b710d3421104ff094a33d3b7e434e61801f2a"
+          }
+        },
+        {
+          "client_id": "672991853076-mcoupsq0sb0co8ukk6bn3prungvlod20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKMSTrNDo17twPkNwgQKRahO7YP8DOd_o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672991853076-mcoupsq0sb0co8ukk6bn3prungvlod20.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:672991853076:android:e7fa2d4d7151e0ed",
+        "android_client_info": {
+          "package_name": "awalk.app.smartvalvetest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "672991853076-4073jmsas8sbo3pu10v6vftc5m297s8e.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "awalk.app.smartvalvetest",
+            "certificate_hash": "913b710d3421104ff094a33d3b7e434e61801f2a"
+          }
+        },
+        {
+          "client_id": "672991853076-mcoupsq0sb0co8ukk6bn3prungvlod20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDKMSTrNDo17twPkNwgQKRahO7YP8DOd_o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "672991853076-mcoupsq0sb0co8ukk6bn3prungvlod20.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

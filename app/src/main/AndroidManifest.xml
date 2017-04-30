@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="awalk.app.smartvalvetest">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme"
+        tools:replace="supportsRtl">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".UserActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".addDialog"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ValveActivity"
+            android:label="@string/title_activity_valve"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".UserActivity">
+
+        </activity>
+    </application>
+
+</manifest>

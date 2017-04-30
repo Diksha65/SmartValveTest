@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="awalk.app.smartvalvetest.ValveActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/iconfab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/activity_horizontal_margin"
+                android:clickable="false"
+                android:backgroundTint="@android:color/background_light"
+                app:borderWidth="0dp"
+                app:fabSize="mini"/>
+
+            <TextView
+                android:id="@+id/valvenametext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iconfab"
+                android:layout_toEndOf="@id/iconfab"
+                android:layout_toStartOf="@+id/valveStatus"
+                android:textAppearance="@style/TabTitle"
+                android:text="@string/default_name" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/valvenametext"
+                android:layout_toEndOf="@id/iconfab"
+                android:layout_toStartOf="@+id/valvestatustext"
+                android:layout_marginTop="5dp"
+                android:textAppearance="@style/TabSubTitle"
+                android:text="description"/>
+
+            <TextView
+                android:id="@+id/valvestatustext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_status"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                android:layout_alignBottom="@id/iconfab"
+                android:textAppearance="@style/AppbarTitle"/>
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_valve" />
+
+</android.support.design.widget.CoordinatorLayout>
