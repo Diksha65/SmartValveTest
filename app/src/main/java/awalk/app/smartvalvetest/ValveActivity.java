@@ -149,6 +149,7 @@ public class ValveActivity extends AppCompatActivity {
         if (!tempStatusString.equals(valveStatusText.getText())) {
             valveStatusText.setText(utils.decodeStatus(tempStatus));
         /*valveToggleText.setText(tempStatusString);*/
+
             switch (tempStatus) {
                 case 0:
                     valveToggle.setEnabled(false);
