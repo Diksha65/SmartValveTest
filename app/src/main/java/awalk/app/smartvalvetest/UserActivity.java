@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -29,6 +30,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class UserActivity extends AppCompatActivity {
+
+    private static final String ADDVALVEDIALOG = "addValveDialog";
 
     private FirebaseUser mFirebaseUser;
     private String mUserId;
@@ -101,8 +104,9 @@ public class UserActivity extends AppCompatActivity {
         addValButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context,addDialog.class);
-                startActivity(intent);
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                AddValveAlertDialog dialog = new AddValveAlertDialog();
+                dialog.show(fragmentManager, ADDVALVEDIALOG);
             }
         });
     }
