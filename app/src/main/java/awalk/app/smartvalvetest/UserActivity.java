@@ -29,6 +29,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import awalk.app.smartvalvetest.viewholder.ValveViewHolder;
+
 public class UserActivity extends AppCompatActivity {
 
     private static final String ADDVALVEDIALOG = "addValveDialog";
@@ -90,7 +92,6 @@ public class UserActivity extends AppCompatActivity {
                 if (!dataSnapshot.hasChildren())
                     Log.d("test","empty");
             }
-
             @Override
             public void onCancelled(DatabaseError databaseError) {
                 hideProgressDialog();
@@ -104,6 +105,7 @@ public class UserActivity extends AppCompatActivity {
         addValButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Toast.makeText(getApplicationContext(), "Clicked", Toast.LENGTH_SHORT).show();
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 AddValveAlertDialog dialog = new AddValveAlertDialog();
                 dialog.show(fragmentManager, ADDVALVEDIALOG);

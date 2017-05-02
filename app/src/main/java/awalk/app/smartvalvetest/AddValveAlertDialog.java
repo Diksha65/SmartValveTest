@@ -11,8 +11,8 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -38,7 +38,22 @@ public class AddValveAlertDialog extends DialogFragment {
     private final DatabaseReference firebase = FirebaseDatabase.getInstance().getReference();
     private FirebaseUser firebaseUser;
 
-    private void setUpViews(View dialogLayout){
+    @NonNull
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+
+        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        if(firebaseUser !=null) {
+            userID = firebaseUser.getUid();
+            userName = firebaseUser.getDisplayName();
+        }
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+        LayoutInflater layoutInflater = getActivity().getLayoutInflater();
+        View dialogLayout = layoutInflater.inflate(R.layout.activity_add_dialog, null);
+        builder.setMessage("Enter your Valve details");
+
         ((EditText)dialogLayout.findViewById(R.id.valveNameEditText))
                 .addTextChangedListener(new TextWatcher() {
                     @Override
@@ -74,21 +89,7 @@ public class AddValveAlertDialog extends DialogFragment {
 
                     }
                 });
-    }
 
-    @NonNull
-    @Override
-    public Dialog onCreateDialog(Bundle savedInstanceState) {
-
-        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        if(firebaseUser !=null)
-            userID = firebaseUser.getUid();
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-
-        LayoutInflater layoutInflater = getActivity().getLayoutInflater();
-        View dialogLayout = layoutInflater.inflate(R.layout.activity_add_dialog, null);
-        builder.setMessage("Enter your Valve details");
         builder.setView(dialogLayout)
                 .setPositiveButton("CREATE", new DialogInterface.OnClickListener() {
                     @Override
@@ -117,11 +118,9 @@ public class AddValveAlertDialog extends DialogFragment {
                 .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-
+                        Toast.makeText(getActivity(), "Cancelled", Toast.LENGTH_SHORT).show();
                     }
                 });
-
-        setUpViews(dialogLayout);
 
         return builder.create();
     }

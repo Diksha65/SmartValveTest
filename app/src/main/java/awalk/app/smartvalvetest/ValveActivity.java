@@ -143,6 +143,7 @@ public class ValveActivity extends AppCompatActivity {
     }
 
     private void UpdateUI(Valve valve) {
+
         valveNameText.setText(valve.getValveName());
         int tempStatus = valve.getValveStatus();
         String tempStatusString = utils.decodeStatus(tempStatus);
@@ -150,24 +151,30 @@ public class ValveActivity extends AppCompatActivity {
             valveStatusText.setText(utils.decodeStatus(tempStatus));
         /*valveToggleText.setText(tempStatusString);*/
 
-            switch (tempStatus) {
-                case 0:
+            /**
+             * TODO: Shibasis, I have added this next line to convert the integer to enum.
+             *       I am 95% sure this is correct. Still you check once.
+             */
+
+            Utils.STATUS status = Utils.STATUS.valueOf(tempStatusString);
+            switch (status) {
+                case OPENING:
                     valveToggle.setEnabled(false);
                     break;
-                case 1:
+                case OPENED:
                     valveToggleText.setText("Close Valve");
                     valveToggle.setEnabled(true);
                     break;
-                case 2:
+                case CLOSING:
                     valveToggle.setEnabled(false);
                     break;
-                case 3:
+                case CLOSED:
                     valveToggleText.setText("Open Valve");
                     valveToggle.setEnabled(true);
                     break;
-                case 4:
+                case LODGED:
                     valveToggle.setEnabled(false);
-                case 5:
+                case OVER_HEATING:
                     valveToggle.setEnabled(false);
             }
         }
